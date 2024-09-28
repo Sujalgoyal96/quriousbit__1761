@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <div class="product-list">
+        <div class="product" data-id="P001" data-name="Laptop" data-price="1000" data-category="Electronics">
+            <h3>Laptop</h3>
+            <p>Price: $1000.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product" data-id="P002" data-name="Phone" data-price="500" data-category="Electronics">
+            <h3>Phone</h3>
+            <p>Price: $500.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product" data-id="P003" data-name="T-Shirt" data-price="20" data-category="Fashion">
+            <h3>T-Shirt</h3>
+            <p>Price: $20.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <h2>Your Cart</h2>
+    <div class="cart">
+        <table id="cart-items">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+        <div id="cart-total">
+            <p>Total (before discounts): $<span id="total-amount">0.00</span></p>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button id="checkout-btn">Checkout</button>
+        <div id="checkout-summary" style="display:none;">
+            <p>Final Total: $<span id="final-total">0.00</span></p>
+            <button id="convert-currency-btn">Convert to EUR/GBP</button>
+            <p id="converted-total"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
